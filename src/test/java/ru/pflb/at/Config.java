@@ -6,5 +6,7 @@ package ru.pflb.at;
 public class Config {
 
     public static String baseUrl = "http://at.pflb.ru";
+    public static String username = "user";
+    public static String password = "user";
 
 }
