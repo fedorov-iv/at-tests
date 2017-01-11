@@ -11,6 +11,6 @@ public class AppTest {
     @Test
     public void openMainPage(){
 
-        open("http://at.pflb.ru");
+        open(Config.baseUrl);
     }
 }
