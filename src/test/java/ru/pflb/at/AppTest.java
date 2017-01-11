@@ -8,6 +8,10 @@ import ru.pflb.at.pages.LoginPage;
 public class AppTest {
 
 
+
+    /**
+     * Тест-кейс: авторизация
+     * */
     @Test
     public void login(){
 
@@ -16,6 +20,10 @@ public class AppTest {
         loginPage.login(Config.username, Config.password);
     }
 
+
+    /**
+     * Тест-кейс: авторизация и выход
+     * */
     @Test
     public void loginAndLogout(){
 
