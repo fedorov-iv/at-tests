@@ -2,6 +2,7 @@ package ru.pflb.at;
 
 import org.junit.Test;
 import org.junit.Before;
+import org.junit.Ignore;
 import ru.pflb.at.pages.EmployeesPage;
 import ru.pflb.at.pages.InnerPage;
 import ru.pflb.at.pages.LoginPage;
