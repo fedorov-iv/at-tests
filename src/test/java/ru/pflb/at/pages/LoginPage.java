@@ -2,12 +2,11 @@ package ru.pflb.at.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import ru.pflb.at.Config;
-
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 /**
- * Created by ifedor on 11.01.17.
+ * Страница авторизации
  */
 public class LoginPage {
 
