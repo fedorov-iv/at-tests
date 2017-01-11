@@ -1,12 +1,24 @@
 package ru.pflb.at;
 
 import org.junit.Test;
+import org.junit.Before;
 import ru.pflb.at.pages.EmployeesPage;
 import ru.pflb.at.pages.InnerPage;
 import ru.pflb.at.pages.LoginPage;
+import com.codeborne.selenide.Configuration;
+
 
 
 public class AppTest {
+
+
+    @Before
+    public void setUp() throws Exception {
+        //System.setProperty("webdriver.chrome.driver", "/Users/ifedor/Downloads/chromedriver");
+
+        //Configuration.browser = Config.browser;
+    }
+
 
 
 
