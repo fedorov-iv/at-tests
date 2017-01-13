@@ -12,15 +12,23 @@ import static com.codeborne.selenide.Selenide.open;
  */
 public class InnerPage {
 
+    /**
+     * Возвращает элемент кнопки выхода
+     *
+     * @return SelenideElement кнопка выхода
+     */
     public SelenideElement getLogoutButton() {
         return $("#logout span");
     }
 
-    public void navigate(){
+    public void navigate() {
         open(Config.baseUrl + "/matrixboard2/index.jsp");
     }
 
-    public void logout(){
+    /**
+     * Выход
+     */
+    public void logout() {
         this.getLogoutButton().click();
     }
 
