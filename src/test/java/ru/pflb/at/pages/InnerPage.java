@@ -68,6 +68,10 @@ public class InnerPage {
         return $(By.linkText("Медали"));
     }
 
+    /**
+     * Переход на страницу
+     */
+
     public void navigate() {
         open(Config.baseUrl + "/matrixboard2/index.jsp");
     }
