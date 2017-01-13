@@ -71,7 +71,6 @@ public class InnerPage {
     /**
      * Переход на страницу
      */
-
     public void navigate() {
         open(Config.baseUrl + "/matrixboard2/index.jsp");
     }
