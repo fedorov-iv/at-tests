@@ -14,10 +14,9 @@ import org.openqa.selenium.By;
  */
 public class EmployeesPage extends InnerPage {
 
-
+    @Override
     public void navigate(){
         open(Config.baseUrl + "/matrixboard2/index.jsp");
-
     }
 
     public ElementsCollection getEmployees() {

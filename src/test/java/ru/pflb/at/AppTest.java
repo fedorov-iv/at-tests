@@ -2,11 +2,13 @@ package ru.pflb.at;
 
 import org.junit.Test;
 import org.junit.Before;
+import org.junit.After;
 import org.junit.Ignore;
 import ru.pflb.at.pages.EmployeesPage;
 import ru.pflb.at.pages.InnerPage;
 import ru.pflb.at.pages.LoginPage;
 import com.codeborne.selenide.Configuration;
+import static com.codeborne.selenide.Selenide.close;
 
 
 
@@ -65,7 +67,10 @@ public class AppTest {
         //employeesPage.navigate(); // вызывает ошибку, т.к. index.jsp - это и форма авторизации, и страница "Люди"
         employeesPage.deleteEmployee(0);
 
+    }
 
-
+    @After
+    public void tearDown(){
+        close();
     }
 }
