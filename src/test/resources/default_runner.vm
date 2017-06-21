@@ -1,25 +1,27 @@
+package ru.pflb.at;
+
 import cucumber.api.CucumberOptions;
-import cucumber.api.Cucumber;
+import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import org.junit.RunWith
-import ru.psb.window.helpers.SelenideConfiguration;
+import org.junit.runner.RunWith;
+import ru.pflb.at.helpers.SelenideConfuguration;
 import static com.codeborne.selenide.Selenide.close;
 
 @RunWith(Cucumber.class)
-@CucumberOptions (features = "D:\Users\user\IdeaProjects\at-tests\src\test\java\ru\pflb\at\features")
-public class RunFeatures {
+@CucumberOptions (features = "D:\\Users\\user\\IdeaProjects\\at-tests\\src\\test\\java\\ru\\pflb\\at\\features")
+public class $className {
 
 
     @BeforeClass
     static public void configureSystem(){
 
-        new SelenideConfiguration(
+        new SelenideConfuguration(
 
-            System.getProperty("browser"),
-            System.getProperty("log_level"),
-            System.getProperty("with_proxy"),
-            System.getProperty("timeout")
+                System.getProperty("browser"),
+                System.getProperty("log_level"),
+                System.getProperty("with_proxy"),
+                System.getProperty("timeout")
 
         ).startDriverWithCurrentProperties();
 
