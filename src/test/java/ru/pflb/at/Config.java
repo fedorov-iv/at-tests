@@ -7,8 +7,8 @@ package ru.pflb.at;
 public class Config {
 
     public static String baseUrl = "http://at.pflb.ru";
-    public static String username = "";
-    public static String password = "";
+    public static String username = "admin";
+    public static String password = "admin";
     public static String browser = "chrome";
 
 }

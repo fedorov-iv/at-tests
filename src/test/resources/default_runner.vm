@@ -1,0 +1,32 @@
+import cucumber.api.CucumberOptions;
+import cucumber.api.Cucumber;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.RunWith
+import ru.psb.window.helpers.SelenideConfiguration;
+import static com.codeborne.selenide.Selenide.close;
+
+@RunWith(Cucumber.class)
+@CucumberOptions (features = "D:\Users\user\IdeaProjects\at-tests\src\test\java\ru\pflb\at\features")
+public class RunFeatures {
+
+
+    @BeforeClass
+    static public void configureSystem(){
+
+        new SelenideConfiguration(
+
+            System.getProperty("browser"),
+            System.getProperty("log_level"),
+            System.getProperty("with_proxy"),
+            System.getProperty("timeout")
+
+        ).startDriverWithCurrentProperties();
+
+    }
+
+    @AfterClass
+    static public void tearDown(){
+        close();
+    }
+}

@@ -8,6 +8,8 @@ import ru.pflb.at.pages.EmployeesPage;
 import ru.pflb.at.pages.InnerPage;
 import ru.pflb.at.pages.LoginPage;
 import com.codeborne.selenide.Configuration;
+import ru.pflb.at.steps.TestSteps;
+
 import static com.codeborne.selenide.Selenide.close;
 
 
@@ -17,9 +19,8 @@ public class AppTest {
 
     @Before
     public void setUp() throws Exception {
-        //System.setProperty("webdriver.chrome.driver", "/Users/ifedor/Downloads/chromedriver");
-
-        //Configuration.browser = Config.browser;
+        System.setProperty("webdriver.chrome.driver", "D:\\Users\\user\\Downloads\\chromedriver.exe");
+        Configuration.browser = Config.browser;
     }
 
 
@@ -31,9 +32,8 @@ public class AppTest {
     @Test
     public void login(){
 
-        LoginPage loginPage = new LoginPage();
-        loginPage.navigate();
-        loginPage.login(Config.username, Config.password);
+        TestSteps testSteps = new TestSteps();
+        testSteps.login();
     }
 
 
@@ -43,9 +43,8 @@ public class AppTest {
     @Test
     public void loginAndLogout(){
 
-        LoginPage loginPage = new LoginPage();
-        loginPage.navigate();
-        loginPage.login(Config.username, Config.password);
+        TestSteps testSteps = new TestSteps();
+        testSteps.login();
 
         InnerPage innerPage = new InnerPage();
         innerPage.logout();
@@ -59,9 +58,8 @@ public class AppTest {
     @Test
     public void deleteEmployee(){
 
-        LoginPage loginPage = new LoginPage();
-        loginPage.navigate();
-        loginPage.login(Config.username, Config.password);
+        TestSteps testSteps = new TestSteps();
+        testSteps.login();
 
         EmployeesPage employeesPage = new EmployeesPage();
         //employeesPage.navigate(); // вызывает ошибку, т.к. index.jsp - это и форма авторизации, и страница "Люди"

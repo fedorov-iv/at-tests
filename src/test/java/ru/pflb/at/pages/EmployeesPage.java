@@ -33,8 +33,12 @@ public class EmployeesPage extends InnerPage {
         //SelenideElement employee = this.getEmployee(index);
         $(By.xpath("//div[@title='Удалить человека']"), index).click();
         $(By.xpath("//button/span[text()='Да']")).click();
-        $(By.xpath("//td[@id='success-text' and text()='Человек удален.']"));
 
+
+    }
+
+    public void employeeIsDeleted(){
+        $(By.xpath("//td[@id='success-text' and text()='Человек удален.']"));
     }
 
 
