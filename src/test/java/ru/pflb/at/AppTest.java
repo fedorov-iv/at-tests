@@ -19,8 +19,8 @@ public class AppTest {
 
     @Before
     public void setUp() throws Exception {
-        System.setProperty("webdriver.chrome.driver", "D:\\Users\\user\\Downloads\\chromedriver.exe");
-        Configuration.browser = Config.browser;
+        //System.setProperty("webdriver.chrome.driver", "D:\\Users\\user\\Downloads\\chromedriver.exe");
+        //Configuration.browser = Config.browser;
     }
 
 
